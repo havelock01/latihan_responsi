@@ -12,7 +12,11 @@ class HomePage extends StatelessWidget {
           height: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("images/homepage.jpg"), fit: BoxFit.fill),
+              image: AssetImage("images/homepage.jpg"),
+              fit: BoxFit.fill,
+              colorFilter: ColorFilter.mode(
+                  Colors.grey.withOpacity(0.8), BlendMode.modulate),
+            ),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -22,6 +26,16 @@ class HomePage extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: Text("Karakter"),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.blue),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 10),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text("Weapon"),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.blue),
                   ),
